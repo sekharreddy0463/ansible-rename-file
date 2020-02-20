@@ -1,2 +1,6 @@
 - name: Move foo to bar
   command: mv /path/to/foo /path/to/bar
+
+ex: how do you rename to the existed file
+- name: Move chandu to reddy
+  command: mv /var/lib/chandu /var/lib/reddy
