@@ -1,0 +1,16 @@
+how do you find the file whether file is existed or not? how do you remove old file in ansible?
+
+ans: 1. using STAT module we have to find the file existed or not
+     2. using ABSENT argemennt we can delete the file or folders stopping service and remove package 
+
+---
+- hosts: localhost
+  tasks:
+  - name: stat foo
+    stat: path=/opt/bar/chandu.yml
+    register: chandu_stat
+
+  - name: Remove old file
+    file:
+      path: /opt/bar/chandu.yml
+      state: absent
